@@ -37,6 +37,7 @@ namespace SqlServerUI
         }
         public void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
+
             if (Username.Text != "admin" && Password.Text != "admin")
             {
                 MessageBox.Show("Incorrect username or password!");
