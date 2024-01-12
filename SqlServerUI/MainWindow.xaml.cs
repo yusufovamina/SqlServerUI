@@ -32,18 +32,13 @@ namespace SqlServerUI
 
             ServerNameTextBlock.Text = connection.DataSource;
             DBNameTextBlock.Text = connection.Database;
-                //"State: " + connection.State + "\n"
-                
+            //"State: " + connection.State + "\n"
+
         }
         public void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
 
-            if (Username.Text != "admin" && Password.Text != "admin")
-            {
-                MessageBox.Show("Incorrect username or password!");
-
-            }
-            else
+            if (Username.Text == "admin" && Password.Text == "admin")
             {
                 string conStr = @"Data Source = DESKTOP-0LP9EBH; Initial Catalog = Hospital; Integrated Security = true;";
                 ellipse.Fill = Brushes.Green;
@@ -62,13 +57,34 @@ namespace SqlServerUI
                     MessageBox.Show(ex.Message);
                 }
 
-            } }
+            }
 
+
+            else
+            {
+
+                MessageBox.Show("Incorrect username or password!");
+            }
+
+        }
         public void DisconnectButton_Click(object sender, RoutedEventArgs e)
         {
+            string conStr = @"Data Source = DESKTOP-0LP9EBH; Initial Catalog = Hospital; Integrated Security = true;";
+            SqlConnection connection = new SqlConnection(conStr);
+            try
+            {
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             ellipse.Fill = Brushes.Red;
             StateLabel.Content = "Disconnected";
-
+            ServerNameTextBlock.Text ="";
+            DBNameTextBlock.Text = "";
+            Username.Text = "";
+            Password.Text = "";
         }
 
         
