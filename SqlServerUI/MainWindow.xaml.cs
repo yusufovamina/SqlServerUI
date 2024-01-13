@@ -32,13 +32,12 @@ namespace SqlServerUI
 
             ServerNameTextBlock.Text = connection.DataSource;
             DBNameTextBlock.Text = connection.Database;
-            //"State: " + connection.State + "\n"
-
+           
         }
         public void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
 
-            if (Username.Text == "admin" && Password.Text == "admin")
+            if (Username.Text == "admin" && Password.Password == "admin")
             {
                 string conStr = @"Data Source = DESKTOP-0LP9EBH; Initial Catalog = Hospital; Integrated Security = true;";
                 ellipse.Fill = Brushes.Green;
@@ -84,7 +83,7 @@ namespace SqlServerUI
             ServerNameTextBlock.Text ="";
             DBNameTextBlock.Text = "";
             Username.Text = "";
-            Password.Text = "";
+            Password.Password = "";
         }
 
         

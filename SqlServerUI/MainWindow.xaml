@@ -6,12 +6,11 @@
         xmlns:local="clr-namespace:SqlServerUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Background="#FFD7F0FA">
+    <Grid Background="#FFCAEDFA">
         <Label Content="SQL Server" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontFamily="Lucida Fax" FontSize="36" FontWeight="Bold"/>
-        <TextBlock Name="ServerNameTextBlock" HorizontalAlignment="Center" Height="33" Margin="0,115,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="180" FontSize="22" Background="White"/>
-        <TextBlock Name="DBNameTextBlock" HorizontalAlignment="Center" Margin="0,165,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="40" Width="180" FontSize="20" Background="White"/>
-        <TextBox Name="Username" HorizontalAlignment="Center" Margin="0,231,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180" Height="37" FontSize="20" />
-        <TextBox Name="Password" HorizontalAlignment="Center" Margin="0,293,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180" Height="38" FontSize="20" />
+        <TextBlock Name="ServerNameTextBlock" HorizontalAlignment="Center" Height="33" Margin="0,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" FontSize="22" Background="White"/>
+        <TextBlock Name="DBNameTextBlock" HorizontalAlignment="Center" Margin="0,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="33" Width="180" FontSize="20" Background="White"/>
+        <TextBox Name="Username" HorizontalAlignment="Center" Margin="0,231,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" Height="37" FontSize="20" />
         <Button Content="Connect" Click="ConnectButton_Click"  HorizontalAlignment="Left" Height="45" Margin="236,357,0,0" VerticalAlignment="Top" Width="125" Background="#FF7DDF38" FontSize="20" FontWeight="Bold"/>
         <Button Content="Disconnect"  Click="DisconnectButton_Click" HorizontalAlignment="Left" Margin="441,357,0,0" VerticalAlignment="Top" Height="45
                 " Width="125" Background="#FFED4747" FontSize="20" FontWeight="Bold"/>
@@ -23,6 +22,8 @@
         <Label Content="Password: " HorizontalAlignment="Left" Margin="10,295,0,0" VerticalAlignment="Top" Height="36" Width="143" FontSize="16" FontWeight="Bold"/>
         <Image Source="https://img.icons8.com/plasticine/100/database.png"  HorizontalAlignment="Left" Height="74" Margin="220,6,0,0" VerticalAlignment="Top" Width="67"/>
         <Image Source="https://img.icons8.com/plasticine/100/database.png"  HorizontalAlignment="Left" Height="74" Margin="506,6,0,0" VerticalAlignment="Top" Width="67"/>
+        <Image Source="C:\Users\Admin\source\repos\SqlServerUI\SqlServerUI\png-image.png" HorizontalAlignment="Center" Height="87" VerticalAlignment="Top" Width="528" Opacity="0.7" Stretch="UniformToFill" Margin="0,135,0,0"/>
+        <PasswordBox Name="Password" HorizontalAlignment="Center" Margin="0,293,0,0" VerticalAlignment="Top" Width="180" Height="36" FontSize="20"/>
 
 
 
